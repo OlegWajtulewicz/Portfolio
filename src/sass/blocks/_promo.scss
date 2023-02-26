@@ -1,0 +1,45 @@
+.promo {
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/bg.jpg') center (center / cover) repeat;
+    padding-top: 205px;
+    &__title {
+        width: 535px;
+        margin-top: 10px;
+        z-index: 1; 
+        position: relative;
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(34, 17, 17, 0.774);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+    &__btns {
+        margin-top: 25px;
+        display: flex;
+        width: 250px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link {
+        color:$main-color;
+        font-weight: bold;
+        z-index: 1;
+        text-decoration: none;  
+        &:hover {
+            color: $main-color;
+            text-decoration: none;
+        }
+    }
+    &__subtitle {
+        position: relative;
+        padding-left: 10px;
+        z-index: 2;
+        @include before_circle;
+        
+    }
+}
