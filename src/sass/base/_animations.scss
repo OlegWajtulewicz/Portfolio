@@ -1,0 +1,17 @@
+@keyframes focus {
+    from {
+        transform: scale(1);
+    }  
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes focusMini {
+    from {
+        transform: scale(1);
+    }  
+    to {
+        transform: scale(1.02);
+    }
+}

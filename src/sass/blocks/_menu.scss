@@ -1,6 +1,6 @@
 .burger {
     z-index: 3;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     height: 21px;
@@ -36,6 +36,9 @@
             }
             &:nth-child(3) {
                 transform: translateY(3px) rotate(45deg);
+            }
+            &:hover {
+                background-color: $purple;
             }
         }
     }
@@ -93,12 +96,12 @@
         text-decoration: none;
         font-weight: 700;
         font-size: 24px;
-        line-height: 36px; 
+        line-height: 55px; 
         &:before {
             content: '';
             position: absolute;
             left: -35px;
-            top: 10px;
+            top: 20px;
             width: 15px;
             height: 15px;
             border: 1.5px solid $main-color;
@@ -119,6 +122,15 @@
         width: 110px;
         display: flex;
         justify-content:space-between;
+        a {
+            &:hover {
+                animation: focus 1s ease forwards;
+                color: $purple;
+                -webkit-box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
+                -moz-box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
+                box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
+            }  
+        }
     }
     &__overlay {
         position: fixed;
