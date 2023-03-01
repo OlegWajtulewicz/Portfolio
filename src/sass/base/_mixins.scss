@@ -31,3 +31,28 @@
         background: rgba(204, 156, 216, 0.65);
     }
 }
+
+@keyframes close {
+    from {
+        transform: rotate(0deg);
+    }
+    To {
+        transform: rotate(45deg);
+    }
+}
+    
+@keyframes backdrop-animation {
+        from {
+           backdrop-filter: blur(0px);
+        }
+        33% {
+          backdrop-filter: blur(2px);
+        }
+        66% {
+            backdrop-filter: blur(4px);
+          }
+        to {
+           backdrop-filter: blur(6px);
+        }
+      }    
+    

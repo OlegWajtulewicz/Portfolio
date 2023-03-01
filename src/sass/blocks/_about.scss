@@ -1,6 +1,6 @@
 .about {
     position: relative;
-    min-height: 1000px;
+    min-height: 2000px;
     background-color :#030100;
     padding-top: 120px;
     .container {
@@ -45,6 +45,34 @@
     &__text {
         font-size: 14px;
         line-height: 21px;
+        margin-bottom: 0;
+    }
+    &__skills {
+        display: grid;
+        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+        grid-auto-rows: 1fr;
+        column-gap: 50px;
+        row-gap: 20px;
+        &-item {
+            display: grid;
+            grid-template-columns: 40px 200px;
+            column-gap: 20px;
+        }
+        &-circle {
+            @include before_circle1;
+            position: relative;
+            z-index: 2;
+            &:before {
+                left: -16px;
+                top: -16px;
+            }
+        }
+        &-text {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+             
+        }
     }
 
 
@@ -62,6 +90,8 @@
         }
         &__fz14 {
             font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
         }
     }
 }
