@@ -1,0 +1,125 @@
+.resume {
+    position: relative;
+    background-color :#030100;
+    
+    .container-resume {
+        max-width: 1135px;
+        background-color: $back-color;
+        margin: 0 auto;
+    }
+    &__title {
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+        z-index: 2;
+        @include before_circle1;
+        &:before {
+            top: 95px;
+            left: 50%;
+            transform: translateX(-50%);
+        }    
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2,425px);
+        padding: 40px 65px 0 65px;
+        column-gap: 135px;
+    }
+    &__column {
+        &-title {
+            padding-left: 35px;
+            position: relative;
+            &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background: $main-color1;
+                border-radius: 100%;
+                z-index: 4;
+                position: relative;
+                display: block;
+                right: 45px;
+                top: 46px;
+            }
+        }
+        ul {
+            list-style-type: none;
+            li {
+                position: relative;
+                &:after {
+                   content: '';
+                   width: 1px;
+                   height: calc(100% + 42px);
+                   position: absolute;
+                   top: -42px;
+                   left: -35px;
+                   background-color: $text-color;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before { 
+            content: '';
+            height: 1px;
+            width: 36px;
+            position: absolute;
+            background-color: $text-color;
+            top: 17px;
+            left: -35px;
+        }
+        &-head {
+            position: relative;
+        }
+        &-location {
+            position: relative;
+            bottom: 8px;
+            left: 60px;
+            font-weight: 500;
+            font-size: 12px;  
+        }
+        &-icon {
+            position: absolute;
+            @include before_circle1;
+            z-index: 3;
+            img {
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+        }
+.resume__body {
+        margin-bottom: 35px;
+        }
+    }    
+
+
+
+
+
+    .title {
+        color: $text-color;
+        &_fz16 {
+            font-size: 16px;
+            top: -20px;
+        }
+        &_fz14 {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
+            position: relative;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 21px;
+            left: 60px;
+            bottom: 1px;
+        }
+        &_fz20 {
+           font-size: 20px; 
+        }
+    }
+}
