@@ -21,9 +21,9 @@
         width: 28px;
     }
     &_active { 
-        
         //cursor: pointer;
-        z-index: 10;
+        //display: none;
+        z-index: 0;
         span {
             transition: all 1s;
             right: 30px;
@@ -40,29 +40,7 @@
             }
             &:nth-child(3) {
                 transform: translateY(3px) rotate(45deg);
-
-                transition-duration: 0.15s;
-                transition-timing-function: linear;
-                transition-delay: 0s;
-                transition-property: background;
-            }
-            
-                //background-color: $purple;
-                //animation: close 1s ease-in-out infinite alternate;
-
-                // transition-duration: 0.15s;
-                // transition-timing-function: 0.15s;
-                // transition-delay: 0s;
-                // transition-property: all;
-
-                // transition: background .15s linear;
-                // transition-duration: 0.15s;
-                // transition-timing-function: linear;
-                // transition-delay: 0s;
-                // transition-property: background;
-            
-            
-            
+            }           
         }
     }
 }      
@@ -166,6 +144,51 @@
         //backdrop-filter: blur(6px);
         animation: backdrop-animation 3s ease-in-out 1s forwards;
         animation-delay: -3s !important;
+        .close {
+            position: absolute;
+            display: block;
+            height: 46px;
+            bottom: auto;
+            top: 20px;
+            right: 90px;
+            z-index: 9;
+            border: 0 none;
+            transition-delay: .49s;
+            b {
+                position: absolute;
+                display: block;
+                height: 26px;
+                width: 26px;
+                top: 11px;
+                right: -55px;
+                margin-top: -11px;  
+                &:hover {
+                    transition: 0.15s linear all;
+                    animation: close .15s ease-in-out forwards;
+                    animation-iteration-count: 1;
+                }
+                i {
+                    position: absolute;
+                    background: $main-color;
+                    display: block;
+                    width: 35px;
+                    height: 3px;   
+                    &:nth-of-type(1) {
+                        top: -5px;
+                        transform: rotate(45deg);
+                        transform-origin: 0 100%;
+                        transition: background .15s linear;    
+                    }
+                    &:nth-of-type(2) {
+                        bottom: 3px;                            
+                        transform: rotate(-45deg);                             
+                        transform-origin: 0 0;
+                        transition: background .15s linear;  
+                    }
+                }
+            }
+        }
     }
+    
 }
     

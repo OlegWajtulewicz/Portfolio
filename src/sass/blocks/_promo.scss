@@ -3,7 +3,6 @@
     position: relative;
     background: url('../img/bg1.jpg') center (center/cover) no-repeat;
     padding-top: 400px;
-    
     &__title {
         width: 535px;
         margin-top: 10px;
@@ -26,6 +25,7 @@
             rgba(7, 4, 4, 0.904) 70%,
             rgba(10, 0, 0, 0.959) 80%,
         );
+        
 
     }
     &__btns {

@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
           burger = document.querySelector('.burger');
           close = document.querySelector('.menu__overlay');
           social = document.querySelector('.menu__social');
+          closeAnimate = document.querySelector('.close');
 
     burger.addEventListener('click', () => {
         burger.classList.toggle('burger_active');
@@ -36,6 +37,10 @@ window.addEventListener('DOMContentLoaded', () => {
     social.addEventListener('click', () => {
             burger.classList.remove('burger_active');
             menu.classList.remove('active');
-        });       
+        });  
+        closeAnimate.addEventListener('click', () => {
+            burger.classList.remove('burger_active');
+            menu.classList.remove('active');
+         });     
     })
 });
