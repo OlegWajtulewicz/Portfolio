@@ -42,7 +42,7 @@
                 position: relative;
                 display: block;
                 right: 45px;
-                top: 46px;
+                top: 37px;
             }
         }
         ul {
@@ -112,14 +112,12 @@
             font-weight: 700;
             line-height: 21px;
             position: relative;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 21px;
             left: 60px;
             bottom: 1px;
         }
         &_fz20 {
            font-size: 20px; 
+           top: -10px;
         }
     }
 }

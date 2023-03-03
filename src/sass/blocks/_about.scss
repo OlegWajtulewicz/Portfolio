@@ -29,12 +29,12 @@
         z-index: 2;    
     }
     &__title:before {
-        top: 20px;
+        top: 13px;
         left: -15px;
     }
     &__subtitle {
         position: relative;
-        top: -50px;
+        top: -20px;
     }
     &__descr {
         .divider {
@@ -42,12 +42,15 @@
             margin-bottom: 20px;
             left: -273px;
             position: relative;
+            top: 45px;
         }
     }
     &__text {
         font-size: 14px;
         line-height: 21px;
         margin-bottom: 0;
+        top: 45px;
+        position: relative;
     }
     &__skills {
         display: grid;
@@ -66,7 +69,12 @@
             z-index: 2;
             &:before {
                 left: -16px;
-                top: -16px;
+                top: -2px;
+            }
+            img {
+                position: relative;
+                top: 10px;
+            
             }
         }
         &-text {
@@ -88,12 +96,13 @@
         color: $text-color;
         &__fz16 {
             font-size: 16px;
-            top: -20px;
+            top: -13px;
         }
         &__fz14 {
             font-size: 14px;
             font-weight: 700;
             line-height: 21px;
+            margin-bottom: 5px;
         }
     }
 }
