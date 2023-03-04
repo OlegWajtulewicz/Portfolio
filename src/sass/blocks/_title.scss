@@ -23,4 +23,20 @@
     &_fz48 {
         font-size: 55px;
     }
+    &__section-title {
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+        z-index: 2;
+        @include before_circle1;
+        &:before {
+            top: 95px;
+            left: 50%;
+            transform: translateX(-50%);
+        }    
+    }
+    &__section-subtitle {
+        text-align: center;
+    } 
+    
 }

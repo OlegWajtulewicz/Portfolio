@@ -7,21 +7,6 @@
         background-color: $back-color;
         margin: 0 auto;
     }
-    &__title {
-        position: relative;
-        text-align: center;
-        padding-top: 100px;
-        z-index: 2;
-        @include before_circle1;
-        &:before {
-            top: 95px;
-            left: 50%;
-            transform: translateX(-50%);
-        }    
-    }
-    &__subtitle {
-        text-align: center;
-    }
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2,425px);
@@ -105,7 +90,6 @@
         color: $text-color;
         &_fz16 {
             font-size: 16px;
-            top: -20px;
         }
         &_fz14 {
             font-size: 14px;

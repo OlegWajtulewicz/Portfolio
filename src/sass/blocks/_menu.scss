@@ -3,22 +3,25 @@
     position: fixed;
     top: 20px;
     right: 30px;
-    height: 21px;
+    height: 31px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-end;
     cursor: pointer;
     transition: all 1s;
-    //transition: 0.15s linear 0.15s background;
+    &:hover {
+        justify-content: space-between;
+        transition: 1s all;
+    }
     span {
         display: block;
-        width: 35px;
-        height: 3px;
+        width: 37px;
+        height: 4px;
         background: $purple; 
     }
     span.short {
-        width: 28px;
+        width: 29px;
     }
     &_active { 
         //cursor: pointer;
@@ -27,7 +30,7 @@
         span {
             transition: all 1s;
             right: 30px;
-            top: 25px;
+            top: 27px;
             background-color: $main-color;
             margin-bottom: -2px; 
             position: fixed;
@@ -160,8 +163,8 @@
                 display: block;
                 height: 26px;
                 width: 26px;
-                top: 11px;
-                right: -55px;
+                top: 15px;
+                right: -54px;
                 margin-top: -11px;  
                 &:hover {
                     transition: 0.15s linear all;
