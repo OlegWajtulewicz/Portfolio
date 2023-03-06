@@ -93,6 +93,10 @@
             text-decoration: none;
             color: $main-color;
             font-weight: 800;
+            &:hover {
+                color:white;
+                transition: all 0.6s;
+            }
         }
         
     }
@@ -115,7 +119,7 @@
         }
         &:hover {
             &:before {
-                background-color:rgba(139, 110, 139, 0.966)
+                background-color:rgb(255, 255, 255);
             }
         }
     }
@@ -130,10 +134,10 @@
         a {
             &:hover {
                 animation: focus 1s ease forwards;
-                color: $purple;
+               
                 -webkit-box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
                 -moz-box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
-                box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
+                box-shadow: 4px 8px 41px 25px rgba(25, 56, 77, 0.2);
             }  
         }
     }
@@ -192,7 +196,6 @@
                 }
             }
         }
-    }
-    
+    }   
 }
     
