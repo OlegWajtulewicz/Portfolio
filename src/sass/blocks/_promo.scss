@@ -4,10 +4,9 @@
     background: url('../img/bg1.jpg') center (center/cover) no-repeat;
     padding-top: 400px;
     &__title {
-        width: 535px;
         margin-top: 10px;
         z-index: 1; 
-        position: relative;
+        position: relative; 
     }
     .overlay {
         width: 100%;
@@ -78,13 +77,29 @@
     .container {
         text-align: -webkit-right;
         margin-right: 390px;
-        bottom: -200px;
-        //position: relative;
+        @include _1440 {
+            margin-right: 60px;
+        }
+        @include _767 {
+            margin-right: 40px;
+        }
+        @include _480 {
+            top: -80px;
+            position: relative;
+        }
+        @include _350 {
+            margin-right: 25px;
+        }
+            
+        
     }
     .title_fz48 {
         font-size: 60px;
         line-height: 80px;
         color: $main-color;
+        @include _767 {
+            font-size: 48px;
+        }
     }
     .title_fz16 {
         color: $main-color;

@@ -7,7 +7,12 @@
     align-items: center;
     z-index: 3;
     top: 400px;
-    //left: 50px;
+    @include _1440 {
+        left: -40px;
+    }
+    @include _767 {
+        display: none;
+    }
     &__divider {
         width: 2px;
         height: 70px;
@@ -15,12 +20,9 @@
     }
     &__text {
         color: $main-color;
-        //transform: rotate(-90deg);
         height: 150px;
         width: 150px;
         font-weight: 300;
-        //display: inline-flex;
-        //align-items: center;
         span {
             display: block;
             width: 150px;

@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
             burger.classList.remove('burger_active');
             menu.classList.remove('active');
         });  
-        closeAnimate.addEventListener('click', () => {
+    closeAnimate.addEventListener('click', () => {
             burger.classList.remove('burger_active');
             menu.classList.remove('active');
          });     
@@ -49,5 +49,17 @@ const counters = document.querySelectorAll('.skills__ratings-counter'),
       lines   = document.querySelectorAll('.skills__ratings-line span');
       
     counters.forEach( (item, i) => {
-        lines[i].style.width = item.innerHTML;
+        lines[i].style.width = item.innerHTML;       
 });      
+
+
+
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+            } else {
+            $('.pageup').fadeOut();
+            }
+        });  
+
