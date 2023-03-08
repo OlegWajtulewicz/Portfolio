@@ -132,6 +132,12 @@
             @include _480 {
                 left: -112px;
             }
+            @include _350 {
+                left: -117px; 
+            }
+            @include _320 {
+                left: -112px;
+            }
         }
     }
     &__text {

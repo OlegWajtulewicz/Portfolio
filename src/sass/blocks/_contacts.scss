@@ -5,6 +5,24 @@
         max-width: 1135px;
         background-color: $back-color;
         margin: 0 auto;
+        @include _1270 {
+            max-width: 1045px;
+        }
+        @include _1170 {
+            max-width: 850px;
+        }
+        @include _979 {
+            max-width: 705px;
+        }
+        @include _767 {
+            max-width: 550px;
+        }
+        @include _600 {
+            max-width: 445px;
+        }
+        @include _480 {
+            max-width: 325px;
+        }
     }
     &__wrapper {
         padding: 120px 35px 90px 52px;
@@ -12,10 +30,46 @@
         grid-template-columns: 400px 585px;
         justify-content: space-between;
         margin-bottom: 120px;
+        @include _1270 {
+            grid-template-columns: 360px 560px;
+            grid-auto-rows: minmax(245px, auto);
+        }
+        @include _1170 {
+            grid-template-columns: 560px;
+            justify-content: center;
+            padding-top: 100px;
+            margin-bottom: 100px;
+        }
+        @include _767 {
+            grid-template-columns: 465px;
+            padding-top: 80px;
+            margin-bottom: 70px;
+        }
+        @include _600 {
+            grid-template-columns: 360px;
+            margin-bottom: 50px;
+        }
+        @include _480 {
+            grid-template-columns: 300px;
+            padding: 40px 10px 50px 10px;
+            margin-bottom: 30px;
+        }
+        @include _350 {
+            margin-bottom: 5px;
+        }
+        @include _320 {
+            margin-bottom: 0px;
+        }
+
     }
     &__photo {
+        @include _1170 {
+            display: none;
+        }
         img {
             width: 100%;
+            object-fit: cover;
+            
         }
     }
     &__title {
@@ -30,6 +84,9 @@
     &__subtitle {
         position: relative;
         top: -20px;
+        @include _480 {
+            font-size: 24px;
+        }
     }
     &__descr {
         .divider {
@@ -38,7 +95,22 @@
             left: -260px;
             position: relative;
             top: 45px;
+
+            @include _1270 {
+                left: -248px;
+            }
+            @include _767 {
+            left: -200px;
+            }
+            @include _600 {
+                left: -150px;
+            }
+            @include _480 {
+                left: -119px;
+            }
         }
+
+        
     }
     &__text {
         font-size: 14px;
@@ -68,17 +140,51 @@
        grid-template: 45px 190px 45px / repeat(2, 280px);
        justify-content: space-between;
        row-gap: 20px;
-       label {       
+       @include _1270 {
+            grid-template: 45px 135px 45px / repeat(2, 270px);
+        }
+        @include _767 {
+            grid-template: 45px 135px 45px / repeat(2, 220px);
+        }
+        @include _600 {
+            grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+        }
+
+        label {       
             position: absolute;      
             padding: 0 8px;
             background-color: $back-color;
             font-size: 12px;
             top: -9px;
             right: 190px;
+            @include _1270 {
+                right: 180px;
+            }
+            @include _767 {
+                right: 130px;
+            }
+            @include _600 {
+                right: 272px;
+            }
+            @include _480 {
+                right: 210px;
+            }
     }
 #mail {
     position: absolute;
     right: 177px;
+    @include _1270 {
+        right: 169px;
+    }
+    @include _767 {
+        right: 117px;
+    }
+    @include _600 {
+        right: 260px;
+    }
+    @include _480 {
+        right: 197px;
+    }
 }
     }
     &__triggers {
@@ -86,12 +192,24 @@
         display: grid !important;
         grid-template-columns: repeat(2, auto);
         column-gap: 35px;
+        @include _600 {
+            grid-column: unset;
+            grid-template-columns: 1fr;
+            column-gap: unset;
+            row-gap: 20px;
+        }
         
     }
     &__policy {
         display: flex;
         align-items: center;
         font-size: 12px;
+
+        @include _600 {
+            width: 180px;
+            margin: 0 auto;
+            line-height: 18px;
+        }
         input {
             margin-right: 10px;
         }
@@ -110,8 +228,24 @@
     &__textarea {
         position: relative;
         grid-column: 1 / 3;
+        @include _600 {
+            grid-column: unset;
+            width: 100%;
+        }
         label {
-            right: 450px;        
+            right: 450px; 
+            @include _1270 {
+                right: 425px;
+            } 
+            @include _767 {
+                right: 330px;
+            }   
+            @include _600 {
+                right: 226px;
+            } 
+            @include _480 {
+                right: 165px;
+            }  
         }
         textarea {position: relative;
             width: 100%;
@@ -128,6 +262,17 @@
         box-sizing: border-box; 
         align-items: center; 
         justify-content: space-around;
+
+        @include _767 {
+            font-size: 14px;
+        }
+
+        @include _600 {
+            order: 2;
+            max-width: 220px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
         &:hover {
             color: white;
             text-decoration: none;
@@ -146,6 +291,10 @@ html {
         font-size: 16px;
         top: -13px;
         margin-bottom: 0px;
+        @include _1170 {
+            left: 15px;
+            width: 90%;
+        }
     }
     &__fz14 {
         font-size: 14px;
