@@ -1,17 +1,56 @@
 .resume {
     position: relative;
     background-color :#030100;
-    
     .container-resume {
         max-width: 1135px;
         background-color: $back-color;
         margin: 0 auto;
+        @include _1270 {
+            max-width: 1045px;
+        }
+        @include _1170 {
+            max-width: 850px;
+        }
+        @include _979 {
+            max-width: 705px;
+        }
+        @include _767 {
+            max-width: 550px;
+        }
+        @include _600 {
+            max-width: 445px;
+        }
+        @include _480 {
+            max-width: 325px;
+        }
     }
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2,425px);
         padding: 40px 65px 0 65px;
         column-gap: 135px;
+        @include _1270 {
+            column-gap: 65px;
+        }
+        @include _1170 {
+            grid-template-columns: repeat(2, 380px);
+            padding: 40px 40px 0 43px;
+            column-gap: 10px;
+        }
+        @include _979 {
+            grid-template-columns: repeat(2, 305px);
+        }
+        @include _767 {
+            grid-template-columns: 410px;
+            padding: 20px 50px 0 50px;
+        }
+        @include _600 {
+            grid-template-columns: 345px;
+        }
+        @include _480 {
+            padding: 20px;
+            grid-template-columns: 260px;
+        }
     }
     &__column {
         &-title {
@@ -28,6 +67,9 @@
                 display: block;
                 right: 45px;
                 top: 37px;
+                @include _350 {
+                    top: 13px;
+                }
             }
         }
         ul {
@@ -66,6 +108,12 @@
             left: 60px;
             font-weight: 500;
             font-size: 12px;  
+            @include _1170 {
+                left: 50px;
+            }
+            @include _480 {
+                width: 170px;
+            }
         }
         &-icon {
             position: absolute;
@@ -79,18 +127,54 @@
         }
 .resume__body {
         margin-bottom: 35px;
+        @include _480 {
+            font-size: 12px;
+            line-height: 18px; 
+            margin-bottom: 10px;
+            font-weight: 600;
+         }
         }
+        
     }    
-
-
+.title__section-title:before {
+    @include _1170 {
+        top: 25px;
+    }
+    @include _480 {
+        top: 11px;
+    }
+    @include _350 {
+        top: 1px;
+    }
+    
+}
+.divider {
+    @include _767 {
+        margin-top: 10px;
+    }
+}
 
 
 
     .title {
         color: $text-color;
+        
+        @include _1170 {
+            padding-top: 30px;
+        }
+        @include _480 {
+            padding-top: 15px;
+        }
+        @include _350 {
+            font-size: 26px;
+            line-height: 36px;
+            padding-top: 0;
+        }
+
         &_fz16 {
             font-size: 16px;
         }
+        
         &_fz14 {
             font-size: 14px;
             font-weight: 700;
@@ -98,6 +182,11 @@
             position: relative;
             left: 60px;
             bottom: 1px;
+
+            @include _1170 {
+                left: 50px;
+                width: 170px;
+            }
         }
         &_fz20 {
            font-size: 20px; 

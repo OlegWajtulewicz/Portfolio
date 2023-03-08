@@ -78,13 +78,22 @@
             line-height: 55px;
         }   
     }
-    &__title:before {
+    &__title {
+        &:before {
         top: 13px;
         left: -15px;
+        @include _1170 {
+            top: 10px;
+        }
+        } 
     }
     &__subtitle {
         position: relative;
         top: -20px;
+        @include _350 {
+            font-size: 26px;
+            line-height: 36px;
+        }
     }
     &__descr {
         .divider {
