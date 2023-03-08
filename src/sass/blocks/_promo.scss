@@ -83,8 +83,12 @@
         @include _767 {
             margin-right: 40px;
         }
-        @include _480 {
+        @include _979 {
             top: -80px;
+            position: relative;
+        }
+        @include _480 {
+            top: -120px;
             position: relative;
         }
         @include _350 {
