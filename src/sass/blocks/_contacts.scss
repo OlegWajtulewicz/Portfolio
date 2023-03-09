@@ -156,34 +156,34 @@
             background-color: $back-color;
             font-size: 12px;
             top: -9px;
-            right: 190px;
+            right: 215px;
             @include _1270 {
-                right: 180px;
+                right: 205px;
             }
             @include _767 {
-                right: 130px;
+                right: 155px;
             }
             @include _600 {
-                right: 272px;
+                right: 295px;
             }
             @include _480 {
-                right: 210px;
+                right: 235px;
             }
     }
 #mail {
     position: absolute;
-    right: 177px;
+    right: 219px;
     @include _1270 {
-        right: 169px;
+        right: 209px;
     }
     @include _767 {
-        right: 117px;
+        right: 159px;
     }
     @include _600 {
-        right: 260px;
+        right: 299px;
     }
     @include _480 {
-        right: 197px;
+        right: 239px;
     }
 }
     }
@@ -233,18 +233,18 @@
             width: 100%;
         }
         label {
-            right: 450px; 
+            right: 504px; 
             @include _1270 {
-                right: 425px;
+                right: 479px;
             } 
             @include _767 {
-                right: 330px;
+                right: 384px;
             }   
             @include _600 {
-                right: 226px;
+                right: 279px;
             } 
             @include _480 {
-                right: 165px;
+                right: 219px;
             }  
         }
         textarea {position: relative;
