@@ -14,8 +14,7 @@
 * {
     font-family: 'Gilroy', sans-serif;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;   
 }
 
 html {
@@ -46,6 +45,7 @@ html {
 @import 'blocks/price';
 @import 'blocks/contacts';
 @import 'blocks/pageup';
+@import 'blocks/modal';
 
 
 

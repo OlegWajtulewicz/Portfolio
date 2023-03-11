@@ -63,3 +63,18 @@ const counters = document.querySelectorAll('.skills__ratings-counter'),
             }
         });  
 
+        //modal-policy
+
+        $('[data-modal=policy]').on('click', function() {
+            $('.overlay-modal, #policy').fadeIn('slow');
+          });
+          $('.modal__close').on('click', function() {
+            $('.overlay-modal, #policy').fadeOut('slow');
+          });
+          
+          $('.button_mini').each(function(i) {
+            $(this).on('click', function() {
+              $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+              $('.overlay, #order').fadeIn('slow');
+            })
+          });
