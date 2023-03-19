@@ -126,6 +126,7 @@
         }
     }
     &__social {
+        color: #CABBCA;
         position: absolute;
         bottom: 50px;
         left: 40%;
@@ -133,10 +134,11 @@
         width: 110px;
         display: flex;
         justify-content:space-between;
-        a {
+        svg {
+            color: #CABBCA;
             &:hover {
                 animation: focus 1s ease forwards;
-               
+                color: white;
                 -webkit-box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
                 -moz-box-shadow: 4px 8px 41px 25px rgba(34, 60, 80, 0.2);
                 box-shadow: 4px 8px 41px 25px rgba(25, 56, 77, 0.2);
