@@ -31,8 +31,9 @@
     }
 
     &__link {
-        color: #CABBCA;
+        color: rgb(201, 186, 201) !important;
         svg { 
+            color: rgb(201, 186, 201);
             &:hover {
                 color: white;
                 animation: focus 1s ease-out forwards;            
@@ -43,4 +44,7 @@
         } 
         
     }
+}
+a {
+    color: rgb(201, 186, 201) !important;  
 }

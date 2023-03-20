@@ -17,6 +17,10 @@
     padding: 0;   
 }
 
+a {
+    color: $main-color;
+}
+
 body.lock {
     overflow: hidden;
 }

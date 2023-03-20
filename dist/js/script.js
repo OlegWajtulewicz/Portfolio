@@ -133,3 +133,10 @@ btnOn.addEventListener('click', (e) => {
       $('body').toggleClass('lock');
     });
   });
+
+  $(window).on('load', function() {
+    $('#preloader').delay(3).fadeOut(2500, function() {
+        $('body').css('overflow','visible');
+        $(this).remove();
+    });
+});
