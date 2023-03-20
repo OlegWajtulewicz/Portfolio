@@ -12,7 +12,7 @@ gulp.task('server', function () {
 
     browserSync.init({
         server: {
-            baseDir: "src"
+            baseDir: "dist"
         }
     });
 
@@ -25,7 +25,7 @@ gulp.task('styles', function () {
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer())
         .pipe(cleanCSS({compatibility: 'ie8'}))
-        .pipe(gulp.dest("src/css"))
+        .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream());
 });
 

@@ -135,7 +135,7 @@ btnOn.addEventListener('click', (e) => {
   });
 
   $(window).on('load', function() {
-    $('#preloader').delay(3).fadeOut(2500, function() {
+    $('#preloader').delay(1).fadeOut(2000, function() {
         $('body').css('overflow','visible');
         $(this).remove();
     });
