@@ -15,3 +15,12 @@
         transform: scale(1.02);
     }
 }
+
+@keyframes hidePreloader {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -40,7 +40,8 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="preloader-head" id="preloader">
+    <div id="preloader">
+        <!-- <img src="img/loading.gif" alt="preloader">     -->
     </div>
     <aside class="sidepanel">
        <a href="https://www.facebook.com/aleh.vajtulevich" class="sidepanel__link"><svg width="20" height="20" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -495,7 +496,7 @@
                     Or leave your details and I will write to you myself:
                 </div>
 
-                <form action="#" class="contacts__form">
+                <form action="https://formspree.io/f/mayzvnqo" method="POST" class="contacts__form">
                     <div class="contacts__input">
                         <input required name="name" id="name" type="text">
                         <label for="name">Name</label>
@@ -506,11 +507,11 @@
                     </div>
 
                     <div class="contacts__textarea">
-                        <textarea name="text" id="text"></textarea>
-                        <label for="text">Message</label>
+                        <textarea name="message" id="text"></textarea>
+                        <label for="message">Message</label>
                     </div>
                     <div class="contacts__triggers">
-                        <button class="  main-btn">Send a message</button>
+                        <button type="submit" class="  main-btn">Send a message</button>
                         <div class="contacts__policy">
                             <input required type="checkbox">
                         <span>I agree with <a href="#policy" data-modal="policy" class="scroll-off">  the privacy policy.</a> </span>

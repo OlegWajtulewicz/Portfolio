@@ -1,16 +1,4 @@
-// const burger = document.querySelector('.burger');
-// const menu = document.querySelector('.menu');
-// const close = document.querySelector('.menu__close');
 
-// burger.addEventListener('click', () => {
-//     menu.classList.add('active');
-// });
-
-//  close.addEventListener('click', () => {
-//      menu.classList.remove('active');
-//  });
-
-//burger menu - sclroll
 
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
@@ -53,12 +41,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // btnOff.addEventListener('click', () => {
-    //       body.classList.add('lock');
-    //   });
-    // btnOn.addEventListener('click', () => {
-    //     body.classList.remove('lock');
-    // });    
+    btnOff.addEventListener('click', () => {
+          body.classList.add('lock');
+      });
+    btnOn.addEventListener('click', () => {
+        body.classList.remove('lock');
+    }); 
+
     })
 });
 
@@ -135,8 +124,48 @@ btnOn.addEventListener('click', (e) => {
   });
 
   $(window).on('load', function() {
-    $('#preloader').delay(1).fadeOut(2000, function() {
+    $('#preloader').delay(1).fadeOut(900, function() {
         $('body').css('overflow','visible');
         $(this).remove();
     });
 });
+
+/////post -- formspree
+
+var form = document.getElementById("form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset();
+          console.log("success");
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    //form.addEventListener("submit", handleSubmit)
+
+
+
+
+
+	
